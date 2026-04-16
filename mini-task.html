@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark text-light "> 
+    <div class="container my-5">
+        <div class="row text-center ">
+            <div class="col-12 mt-5 py-5">
+                <button class="btn btn-warning py-3 px-3 w-25" id="btn">Load Jobs</button>
+                <div id="jobs" class="my-3 text-info text-center"></div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-warning py-3 px-3 w-25" id="two">Unload Jobs</button>
+
+                
+            </div>
+
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    const btn=document.getElementById("btn");
+    const two_btn=document.getElementById("two");
+    const jobs=document.getElementById("jobs")
+
+    btn.addEventListener("click",(()=>
+    {
+        jobs.innerHTML=`<h3> Following are the jobs</h3>
+                        <ul class="list-group text-center my-3">
+                            <li class="list-group-item py-3">Full stack developement</li>
+                            <li class="list-group-item py-3">Devops engineer</li>
+                            <li class="list-group-item py-3">Data analytics</li>
+                            <li class="list-group-item py-3">Cloud computing</li>
+                        </ul>
+                        `
+    }))
+    two_btn.addEventListener('click',(()=>
+    {
+        jobs.innerHTML=""
+        
+    }))
+</script>
+
+</html>
